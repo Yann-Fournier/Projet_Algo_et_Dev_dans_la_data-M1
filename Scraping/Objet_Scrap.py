@@ -426,6 +426,10 @@ class ScrapLivreAmazon:
 
 
 if __name__ == "__main__":
+    print()
+    print("Test de la classe ScrapLivreAmazon")
+    print()
+
     scraping = ScrapLivreAmazon()
 
     # Utilisation de la fonction all-in-one ------------------------------------------------------------------------------------------------------------------------------------------
