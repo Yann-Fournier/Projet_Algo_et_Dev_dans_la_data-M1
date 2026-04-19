@@ -13,7 +13,7 @@ from Utils import fetch_binance_data, enrich_features
 
 get_custom_objects().update({"mse": keras.losses.mean_squared_error})
 
-st.set_page_config(page_title="🔮 Prédiction Crypto - LSTM", layout="wide")
+st.set_page_config(page_title="Prédiction Crypto - LSTM", layout="wide")
 st.title("Prédiction Crypto - LSTM")
 
 crypto_symbol = st.selectbox("Choisir une cryptomonnaie", ["BTCUSDT"])
@@ -42,7 +42,7 @@ horizons = {
 }
 
 if predict_button:
-    st.info(f"📡 Récupération des données pour {crypto_symbol}...")
+    st.info(f"Récupération des données pour {crypto_symbol}...")
     params = horizons[prediction_type]
     df = fetch_binance_data(crypto_symbol, params["interval"], 300)
     df = enrich_features(df)
@@ -76,9 +76,9 @@ if predict_button:
                 class_pred = preds[1][-1][0] if isinstance(preds, list) and len(preds) > 1 else None
 
                 st.success(f"Prédiction pour {crypto_symbol} ({prediction_type}) terminée.")
-                st.metric("🔢 % Évolution prédite", f"{reg_pred:.2f}%")
+                st.metric("% Évolution prédite", f"{reg_pred:.2f}%")
                 if class_pred is not None:
-                    tendance = "📉 Baisse probable" if class_pred < 0.5 else "📈 Hausse probable"
+                    tendance = "Baisse probable" if class_pred < 0.5 else "Hausse probable"
                     st.write(f"Prédiction de tendance : **{tendance}**")
 
 
