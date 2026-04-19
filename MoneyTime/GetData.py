@@ -124,7 +124,7 @@ class GetData:
             raise NotImplementedError(f"L'échange {self.exchange} n'est pas supporté")
             
         # Test de la prise en charge de l'intervalle
-        self.tf = tf.lower()
+        self.tf = tf
         try:
             self.interval_dict = GetData.INTERVALS[self.tf]
         except Exception:
@@ -281,10 +281,10 @@ if __name__ == "__main__":
     get_data_binance = GetData(
         exchange="binance",
         pair="BTC/USDT",
-        tf="1d",
+        tf="1M",
     )
     asyncio.run(get_data_binance.download_data())
-    get_data_binance.save_data(dir="MoneyTime")
+    # get_data_binance.save_data(dir="MoneyTime")
     
     # Test de la recuperation des données sur BinanceUSDM => OK
     # print("Test de la récupération des données sur BinanceUSDM")
