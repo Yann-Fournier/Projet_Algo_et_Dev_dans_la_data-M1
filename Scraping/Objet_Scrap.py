@@ -444,7 +444,8 @@ if __name__ == "__main__":
     # scraping.quit_driver()
 
     # Concaténation des CSV ----------------------------------------------------------------------------------------------------------------------------------------------------------
-    # scraping.concat_livre_csv()
+    print('Concaténation des CSV des livres en un seul fichier CSV combiné')
+    scraping.concat_livre_csv()
 
 
 
