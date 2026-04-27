@@ -1,6 +1,12 @@
 # Projet final – Data & IA, optimization, orientées objet
 ---
 
+***Participants:***
+- Yann Fournier
+- Elodie Senel
+
+[Github du projet](https://github.com/Yann-Fournier/Projet_Algo_et_Dev_dans_la_data-M1)
+
 Notre projet à pour but de prédire le cours du Bitcoin. Nous avons décidé de l'appeler `MoneyTime`.
 
 ## Prérequis
